@@ -4,9 +4,8 @@
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
 .DigitalMesh {
-  height:100%;
+  
   background-color: #F3F4F8;
-
 }
 .dashboard {
   background-color: #F3F4F8;
@@ -22,21 +21,22 @@
   padding-left: 20px;
 }
 
-.submit-card{
-  padding: 10px;
-}
-
 .car-card {
   margin: 10px 0px;
-  height: 40vh;
-  width: 20vw;
+  width: 60vw;
 }
 
 .card-container {
   display: grid;
   margin: auto;
-  justify-content: start;
+  justify-content: center;
   width: 80vw;
+  padding-top:5%;
+  padding-bottom: 100px;
+}
+
+.drop-down-menu {
+  padding-bottom: 15px;
 }
 
 
