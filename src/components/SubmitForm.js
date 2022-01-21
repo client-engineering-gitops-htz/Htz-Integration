@@ -1,33 +1,62 @@
-import React from 'react';
-import '../styles/DigitalMesh.css';
-import { Card, InputGroup, Button} from '@blueprintjs/core';
-import {DatePicker, TimePicker} from '@blueprintjs/datetime';
-import { Select } from "@blueprintjs/select";
+import React, { useState } from "react";
+import "../styles/DigitalMesh.css";
+import { Card, InputGroup, Button, MenuItem } from "@blueprintjs/core";
+import { TimePicker } from "@blueprintjs/datetime";
+import RentalDatePicker from "./RentalDatePicker";
+import "@blueprintjs/datetime/lib/css/blueprint-datetime.css";
+import "@blueprintjs/core/lib/css/blueprint.css";
 
-const SubmitForm=() => {
-    return( 
-        <div>
-            <div className="card-container">
-                <Card className="car-card" interactive={true}>
-                <h5>
-                    <a href="#">IBM_1</a>
-                </h5>
-                <p>Card content</p>
-                <div className='drop-down-menu'>
-                <InputGroup type="search" placeholder='Pick Up Location' />
-                <InputGroup type="search" placeholder='Pick Up Date' />
-                <InputGroup type="search" placeholder='Pick Up Time' />
-                <InputGroup type="search" placeholder='Drop Off Location' />
-                <InputGroup type="search" placeholder='Drop Off Date' />
-                <InputGroup type="search" placeholder='Drop Off Time' />
-                </div>
-                <Button>Submit</Button>
-                </Card>
+const locations = [
+  { name: "JFK", id: 1 },
+  { name: "LGA", id: 2 },
+  { name: "DFW", id: 3 },
+];
+
+const SubmitForm = () => {
+  const [selectedLocation, setSelectedLocation] = useState(locations[0]);
+  const handleClick = () => {
+    console.log("clicked");
+  };
+
+  return (
+    <div>
+      <div className="card-container">
+        <Card className="car-card">
+          <h5>
+            <a href="#">IBM_1</a>
+          </h5>
+          <p>Card content</p>
+          <div className="drop-down-menu">
+            <div class="bp3-html-select">
+              <select>
+                <option selected>Choose a pick up location</option>
+                {locations.map((location) => {
+                  return <option>{location.name}</option>;
+                })}
+              </select>
+              <span class="bp3-icon bp3-icon-double-caret-vertical"></span>
             </div>
+            {/* {add a pop up menu for datepicker} */}
+            <RentalDatePicker type={"Pickup"} />
 
-        </div>
-
-    )
-}
+            <TimePicker />
+            <div class="bp3-html-select">
+              <select>
+                <option selected>Choose a drop off location</option>
+                {locations.map((location) => {
+                  return <option>{location.name}</option>;
+                })}
+              </select>
+              <span class="bp3-icon bp3-icon-double-caret-vertical"></span>
+            </div>
+            <RentalDatePicker type={"Drop off"} />
+            <TimePicker />
+          </div>
+          <Button>Submit</Button>
+        </Card>
+      </div>
+    </div>
+  );
+};
 
 export default SubmitForm;
