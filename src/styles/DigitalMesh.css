@@ -1,9 +1,10 @@
-.DigitalMesh {
 
-  @import '~@blueprintjs/core/src/common/_variables';
-  @import '~@blueprintjs/core/src/blueprint.css';
-  @import '~normalize.css';
-  
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+.DigitalMesh {
+  height:100%;
   background-color: #F3F4F8;
 
 }
@@ -23,6 +24,19 @@
 
 .submit-card{
   padding: 10px;
+}
+
+.car-card {
+  margin: 10px 0px;
+  height: 40vh;
+  width: 20vw;
+}
+
+.card-container {
+  display: grid;
+  margin: auto;
+  justify-content: start;
+  width: 80vw;
 }
 
 
