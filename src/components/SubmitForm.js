@@ -1,10 +1,21 @@
 import React from 'react';
-import { Card, InputGroup, Text} from '@blueprintjs/core';
+import '../styles/DigitalMesh.css';
+import { Card, InputGroup, Button} from '@blueprintjs/core';
 import {DatePicker, TimePicker} from '@blueprintjs/datetime';
+import { Select } from "@blueprintjs/select";
 
 const SubmitForm=() => {
     return( 
         <div>
+            <div className="card-container">
+                <Card className="car-card" interactive={true}>
+                <h5>
+                    <a href="#">IBM_1</a>
+                </h5>
+                <p>Card content</p>
+                <Button>Submit</Button>
+                </Card>
+            </div>
             <Card className='submit-card'>
                 {/* Gonna have to switch this to blueprint Select: 
                 https://blueprintjs.com/docs/#select/select-component.querying */}
