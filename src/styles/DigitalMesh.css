@@ -1,20 +1,17 @@
-
 @import "~normalize.css";
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
 .DigitalMesh {
-  
-  background-color: #F3F4F8;
+  background-color: #f3f4f8;
 }
 .dashboard {
-  background-color: #F3F4F8;
+  background-color: #f3f4f8;
 }
 .top-bar {
   border-bottom: solid 5px;
   border-bottom-color: #fed60a;
-  background-color: #FFFFFF;
-
+  background-color: #ffffff;
 }
 .logo {
   width: 6rem;
@@ -22,21 +19,22 @@
 }
 
 .car-card {
-  margin: 10px 0px;
-  width: 60vw;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-evenly;
 }
 
 .card-container {
   display: grid;
   margin: auto;
   justify-content: center;
-  width: 80vw;
-  padding-top:5%;
+  width: 90%;
+  padding-top: 5%;
   padding-bottom: 100px;
 }
 
 .drop-down-menu {
   padding-bottom: 15px;
 }
-
-
