@@ -82,8 +82,9 @@
   border-radius: 0px;
   min-height:4rem;
   width: 8rem;
-  background-color: white !important;
   background-image: none !important;
   font-size: large;
+  background-color: #fed60a !important;
+  box-shadow: none !important;
 
 }
