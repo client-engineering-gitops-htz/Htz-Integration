@@ -2,9 +2,6 @@ import React from "react";
 import "@blueprintjs/datetime/lib/css/blueprint-datetime.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
 import { DateInput } from "@blueprintjs/datetime";
-import { Button } from "@blueprintjs/core";
-
-import { Classes, Popover2 } from "@blueprintjs/popover2";
 
 function RentalDatePicker({
   type,
