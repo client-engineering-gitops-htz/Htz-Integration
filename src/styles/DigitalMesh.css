@@ -18,6 +18,10 @@
   padding-left: 20px;
 }
 
+.bp3-html-select {
+  align-content: flex-end;
+}
+
 .car-card {
   margin: 10px;
   display: flex;
@@ -41,18 +45,18 @@
   padding-top: 4%;
   padding-bottom: 100px;
 }
-.trip-header{
+.trip-header {
   padding-left: 1rem;
   font-size: xx-large;
   font-weight: 500;
 }
 
-.trip-details{
+.trip-details {
   display: flex;
 }
 
 .select-location {
-  background-color:#ffffff !important;
+  background-color: #ffffff !important;
   background-image: none !important;
   min-height: 4rem !important;
 }
@@ -64,12 +68,12 @@
 }
 
 .date-time-details {
-  display:flex;
+  display: flex;
   align-items: center;
   margin-left: 1rem;
 }
 
-.bp3-button.bp3-intent-primary.bp3-popover2-target{
+.bp3-button.bp3-intent-primary.bp3-popover2-target {
   background-color: white;
   color: #182026;
   min-height: 4rem;
@@ -77,14 +81,13 @@
   background-image: none;
 }
 
-.submit-button{
+.submit-button {
   margin-left: 1rem;
   border-radius: 0px;
-  min-height:4rem;
+  min-height: 4rem;
   width: 8rem;
   background-image: none !important;
   font-size: large;
   background-color: #fed60a !important;
   box-shadow: none !important;
-
 }
