@@ -22,8 +22,15 @@
   margin: 10px;
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-evenly;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-bottom: solid 5px;
+  border-bottom-color: #fed60a;
+  min-height: 10rem;
+  max-width: 100rem;
 }
 
 .card-container {
@@ -31,10 +38,52 @@
   margin: auto;
   justify-content: center;
   width: 90%;
-  padding-top: 5%;
+  padding-top: 4%;
   padding-bottom: 100px;
 }
+.trip-header{
+  padding-left: 1rem;
+  font-size: xx-large;
+  font-weight: 500;
+}
 
-.drop-down-menu {
-  padding-bottom: 15px;
+.trip-details{
+  display: flex;
+}
+
+.select-location {
+  background-color:#ffffff !important;
+  background-image: none !important;
+  min-height: 4rem !important;
+}
+
+.bp3-timepicker-input-row {
+  min-height: 4rem !important;
+  font-size: large;
+  min-width: 8rem;
+}
+
+.date-time-details {
+  display:flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.bp3-button.bp3-intent-primary.bp3-popover2-target{
+  background-color: white;
+  color: #182026;
+  min-height: 4rem;
+  border-radius: 0px;
+  background-image: none;
+}
+
+.submit-button{
+  margin-left: 1rem;
+  border-radius: 0px;
+  min-height:4rem;
+  width: 8rem;
+  background-color: white !important;
+  background-image: none !important;
+  font-size: large;
+
 }
