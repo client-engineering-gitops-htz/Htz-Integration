@@ -10,7 +10,6 @@ const locations = [
 function LocationPicker({ type, setPickupLocation, setDropoffLocation }) {
   return (
     <HTMLSelect
-      large={true}
       onChange={(e) => {
         if (type === "Pick-Up") setPickupLocation(e.target.value);
         if (type === "Drop-Off") setDropoffLocation(e.target.value);
@@ -18,7 +17,7 @@ function LocationPicker({ type, setPickupLocation, setDropoffLocation }) {
     >
       <option selected>{`Choose ${type} location`}</option>
       {locations.map((location) => {
-        return <option value={location.name}>{location.name}</option>;
+        return <option value={location.id}>{location.name}</option>;
       })}
     </HTMLSelect>
   );
