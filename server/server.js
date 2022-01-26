@@ -11,8 +11,6 @@ server.listen(port, function () {
 });
 
 
-
-
 setTimeout(() => {
     app.get('/hello', (req, res) => res.send('Hello World Node.js Wow so fast'));
     app.get('/ready', (req, res) => res.json({ status: 'UP' }));

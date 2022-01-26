@@ -16,7 +16,8 @@
     "@blueprintjs/popover2": "^0.12.9",
     "@blueprintjs/select": "^3.18.11",
     "express": "^4.15.3",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "react-router-dom": "^6.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
