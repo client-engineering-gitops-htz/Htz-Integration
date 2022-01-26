@@ -3,10 +3,10 @@ import SubmitForm from './SubmitForm';
 import { Routes, Route, Link } from "react-router-dom";
 
 
-const Dashboard=() => {
+const LandingPage=() => {
     return( 
-        <div className='dashboard'>
-            <SubmitForm/>
+        <div className='landing-page'>
+            hi there
 
         </div>
         
@@ -14,4 +14,4 @@ const Dashboard=() => {
     )
 }
 
-export default Dashboard;
+export default LandingPage;

@@ -79,8 +79,7 @@ const SubmitForm = () => {
 
                 console.log("pickup time", pickupTime);
                 console.log("dropoff date", dropoffTime);
-              }}
-            >
+              }}>
               Submit
             </Button>
           </div>
