@@ -1,5 +1,6 @@
 import React from "react";
 import { HTMLSelect } from "@blueprintjs/core";
+const usLocations = require('../assets/ATPxref_US_first_20.json');
 const locations = [
   { name: "JFK", id: 1 },
   { name: "LGA", id: 2 },
