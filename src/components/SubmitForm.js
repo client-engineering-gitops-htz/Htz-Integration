@@ -7,6 +7,7 @@ import LocationPicker from "./LocationPicker";
 import "@blueprintjs/datetime/lib/css/blueprint-datetime.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
 import { getDateOnlyWithTime } from "@blueprintjs/datetime/lib/esm/common/dateUtils";
+import { Link } from "react-router-dom";
 
 const locations = [
   { name: "JFK", id: 1 },
@@ -67,6 +68,8 @@ const SubmitForm = () => {
                 }}
               />
             </div>
+            
+            <Link to='/landing'>
 
             <Button
               className="submit-button"
@@ -82,6 +85,7 @@ const SubmitForm = () => {
               }}>
               Submit
             </Button>
+            </Link>
           </div>
         </Card>
       </div>
