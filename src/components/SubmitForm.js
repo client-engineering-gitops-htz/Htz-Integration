@@ -17,7 +17,7 @@ const locations = [
 
 const SubmitForm = () => {
   const [pickupLocation, setPickupLocation] = useState();
-  const [pickupDate, setPickupDate] = useState();
+  const [pickupDate, setPickupDate] = useState(); // format date
   const [pickupTime, setPickupTime] = useState();
   const [dropoffLocation, setDropoffLocation] = useState();
   const [dropoffDate, setDropoffDate] = useState();
@@ -48,11 +48,8 @@ const SubmitForm = () => {
                 setDropoffDate={setDropoffDate}
                 pickupDate={pickupDate}
               />
-              <TimePicker
-                onChange={(val) => {
-                  setPickupTime(val);
-                }}
-              />
+              {/* Fix center alignment on digits */}
+              <TimePicker />
             </div>
 
             <div className="date-time-details">
@@ -62,14 +59,9 @@ const SubmitForm = () => {
                 setDropoffDate={setDropoffDate}
                 dropoffDate={dropoffDate}
               />
-              <TimePicker
-                onChange={(val) => {
-                  setDropoffTime(val);
-                }}
-              />
+              {/* Fix center alignment on caret */}
+              <TimePicker />
             </div>
-            
-            <Link to='/landing'>
 
             <Button
               className="submit-button"
@@ -79,13 +71,10 @@ const SubmitForm = () => {
 
                 console.log("pickup date", pickupDate);
                 console.log("dropoff date", dropoffDate);
-
-                console.log("pickup time", pickupTime);
-                console.log("dropoff date", dropoffTime);
-              }}>
+              }}
+            >
               Submit
             </Button>
-            </Link>
           </div>
         </Card>
       </div>

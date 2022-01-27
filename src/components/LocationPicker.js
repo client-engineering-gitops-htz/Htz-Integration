@@ -1,6 +1,5 @@
 import React from "react";
 import { HTMLSelect } from "@blueprintjs/core";
-
 const locations = [
   { name: "JFK", id: 1 },
   { name: "LGA", id: 2 },
@@ -16,8 +15,8 @@ function LocationPicker({ type, setPickupLocation, setDropoffLocation }) {
       }}
     >
       <option selected>{`Choose ${type} location`}</option>
-      {locations.map((location) => {
-        return <option value={location.id}>{location.name}</option>;
+      {usLocations.map((usLocations) => {
+        return <option value={usLocations.OAG_CODE}>{usLocations.LOC_NM}</option>;
       })}
     </HTMLSelect>
   );
