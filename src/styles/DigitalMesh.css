@@ -50,7 +50,7 @@
   justify-content: center;
   width: 90%;
   padding-top: 4%;
-  padding-bottom: 100px;
+  padding-bottom: 28rem;
 }
 .trip-header {
   padding-left: 1rem;
@@ -95,10 +95,16 @@
 .submit-button {
   margin-left: 1rem;
   border-radius: 0px;
-  min-height: 4rem;
-  width: 8rem;
+  min-height: 2rem;
+  width: 10rem;
   background-image: none !important;
   font-size: large;
   background-color: #fed60a !important;
   box-shadow: none !important;
+}
+
+.landing-page {
+  background-color: #f3f4f8;
+  height: 50rem;
+
 }
