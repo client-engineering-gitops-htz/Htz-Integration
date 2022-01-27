@@ -73,7 +73,7 @@
   min-width: 8rem;
 }
 
-.bp3-html-select .bp3-large{
+.bp3-html-select .bp3-large {
   background-color: #ffffff !important;
   background-image: none !important;
 }
@@ -103,8 +103,11 @@
   box-shadow: none !important;
 }
 
+.disabled-link {
+  pointer-events: none;
+}
+
 .landing-page {
   background-color: #f3f4f8;
   height: 50rem;
-
 }

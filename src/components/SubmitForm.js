@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/DigitalMesh.css";
 import { Card, Button, HTMLSelect } from "@blueprintjs/core";
 import { TimePicker } from "@blueprintjs/datetime";
@@ -15,6 +15,20 @@ const locations = [
   { name: "DFW", id: 3 },
 ];
 
+// Location schema {
+//
+// }
+
+// SubmitForm schema
+// {
+//   pickupLocation: Object,
+//   dropoffLocation: Object,
+//   pickupDate: String,
+//   dropoffDate: String,
+//   pickupTime: String,
+//   dropoffTime: String
+// }
+
 const SubmitForm = () => {
   const [pickupLocation, setPickupLocation] = useState();
   const [pickupDate, setPickupDate] = useState();
@@ -22,6 +36,27 @@ const SubmitForm = () => {
   const [dropoffLocation, setDropoffLocation] = useState();
   const [dropoffDate, setDropoffDate] = useState();
   const [dropoffTime, setDropoffTime] = useState();
+  const [formFilled, setFormFilled] = useState(false);
+
+  useEffect(() => {
+    if (
+      pickupLocation &&
+      pickupDate &&
+      pickupTime &&
+      dropoffLocation &&
+      dropoffDate &&
+      dropoffTime
+    ) {
+      setFormFilled(true);
+    }
+  }, [
+    pickupLocation,
+    pickupDate,
+    pickupTime,
+    dropoffLocation,
+    dropoffDate,
+    dropoffTime,
+  ]);
 
   return (
     <div>
@@ -68,23 +103,24 @@ const SubmitForm = () => {
                 }}
               />
             </div>
-            
-            <Link to='/landing'>
 
-            <Button
-              className="submit-button"
-              onClick={() => {
-                console.log("pickup", pickupLocation);
-                console.log("dropoff", dropoffLocation);
+            <Link className={!formFilled ? "disabled-link" : ""} to="/landing">
+              <Button
+                disabled={!formFilled}
+                className="submit-button"
+                onClick={() => {
+                  console.log("pickup", pickupLocation);
+                  console.log("dropoff", dropoffLocation);
 
-                console.log("pickup date", pickupDate);
-                console.log("dropoff date", dropoffDate);
+                  console.log("pickup date", pickupDate);
+                  console.log("dropoff date", dropoffDate);
 
-                console.log("pickup time", pickupTime);
-                console.log("dropoff date", dropoffTime);
-              }}>
-              Submit
-            </Button>
+                  console.log("pickup time", pickupTime);
+                  console.log("dropoff date", dropoffTime);
+                }}
+              >
+                Submit
+              </Button>
             </Link>
           </div>
         </Card>
