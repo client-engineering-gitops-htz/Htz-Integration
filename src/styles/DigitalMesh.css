@@ -140,10 +140,12 @@
 }
 
 .car-results{
-  display: flex;
+  
   padding-top: 4.55rem;
   padding-left: 5rem;
 }
 .results-card {
+  display: flex;
   border-radius: 0;
+  width: 60rem;
 }
