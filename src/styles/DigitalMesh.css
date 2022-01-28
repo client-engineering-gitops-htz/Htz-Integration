@@ -170,8 +170,7 @@
   padding-left: 2.5rem;
 }
 .output-log-card{
-  height:40rem;
-
+  min-height:35rem;
 }
 
 .analytics-dashboard{
