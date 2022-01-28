@@ -8,7 +8,9 @@ const LogConversions=() => {
         <div className='input-container'>
             <h1>Seamless Input:</h1>
             <Card className='input-log-card'>
-
+                <div>
+                    
+                </div>
             </Card>
         </div>
         <div className='output-container'>
