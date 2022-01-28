@@ -149,3 +149,31 @@
   border-radius: 0;
   width: 60rem;
 }
+
+.logs-dashboard{
+  background-color: #f3f4f8;
+  display: flex;
+  height: 47rem;
+}
+
+.input-container{
+  width: 47rem;
+  padding-left: 1.5rem;
+  
+}
+.input-log-card{
+  height:40rem;
+}
+
+.output-container{
+  width: 50rem;
+  padding-left: 2.5rem;
+}
+.output-log-card{
+  height:40rem;
+
+}
+
+.analytics-dashboard{
+  background-color: #f3f4f8;
+}
