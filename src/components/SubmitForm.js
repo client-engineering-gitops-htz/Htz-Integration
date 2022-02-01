@@ -15,16 +15,6 @@ const locations = [
   { name: "DFW", id: 3 },
 ];
 
-// SubmitForm schema
-// {
-//   pickupLocation: Object,
-//   dropoffLocation: Object,
-//   pickupDate: String,
-//   dropoffDate: String,
-//   pickupTime: String,
-//   dropoffTime: String
-// }
-
 const SubmitForm = () => {
   const [pickupLocation, setPickupLocation] = useState();
   const [pickupDate, setPickupDate] = useState();
@@ -33,6 +23,91 @@ const SubmitForm = () => {
   const [dropoffDate, setDropoffDate] = useState();
   const [dropoffTime, setDropoffTime] = useState();
   const [formFilled, setFormFilled] = useState(false);
+
+  const handleSubmit = () => {
+    const pickupDateFormatted = pickupDate
+      .toLocaleDateString("sv-SE")
+      .split("-")
+      .join("");
+
+    const dropoffDateFormatted = dropoffDate
+      .toLocaleDateString("sv-SE")
+      .split("-")
+      .join("");
+
+    const input = {
+      PuIsoLocationCode: {
+        PuLocation: parseInt(pickupLocation),
+      },
+      PuDate: pickupDateFormatted,
+      PuTime: pickupTime.toLocaleTimeString("en-GB"),
+      DoIsoLocationCode: {
+        DoLocation: parseInt(dropoffLocation),
+      },
+      DoDate: dropoffDateFormatted,
+      DoTime: dropoffTime.toLocaleTimeString("en-GB"),
+    };
+
+    console.log(input);
+  };
+
+  // "UI-Input": {
+  //   "type": "object",
+  //   "properties": {
+  //     "SessionCheckID": {
+  //       "type": "string"
+  //     },
+  //     "Brand": {
+  //       "type": "string"
+  //     },
+  //     "PuIsoLocationCode": {
+  //       "type": "object",
+  //       "properties": {
+  //         "PuCountry": {
+  //           "type": "string"
+  //         },
+  //         "PuStateProvince": {
+  //           "type": "string"
+  //         },
+  //         "PuGdsCity": {
+  //           "type": "string"
+  //         },
+  //         "PuLocation": {
+  //           "type": "integer"
+  //         }
+  //       }
+  //     },
+  //     "PuDate": {
+  //       "type": "string"
+  //     },
+  //     "PuTime": {
+  //       "type": "string"
+  //     },
+  //     "DoIsoLocationCode": {
+  //       "type": "object",
+  //       "properties": {
+  //         "DoCountry": {
+  //           "type": "string"
+  //         },
+  //         "DoStateProvince": {
+  //           "type": "string"
+  //         },
+  //         "DoGdsCity": {
+  //           "type": "string"
+  //         },
+  //         "DoLocation": {
+  //           "type": "integer"
+  //         }
+  //       }
+  //     },
+  //     "DoDate": {
+  //       "type": "string"
+  //     },
+  //     "DoTime": {
+  //       "type": "string"
+  //     }
+  //   }
+  // }
 
   useEffect(() => {
     if (
@@ -100,19 +175,13 @@ const SubmitForm = () => {
               />
             </div>
 
-            <Link className={!formFilled ? "disabled-link" : ""} to="/landing">
+            {/* !formFilled ? "disabled-link" : "" */}
+            <Link to="/landing">
               <Button
-                disabled={!formFilled}
+                // disabled={!formFilled}
                 className="submit-button"
                 onClick={() => {
-                  console.log("pickup", pickupLocation);
-                  console.log("dropoff", dropoffLocation);
-
-                  console.log("pickup date", pickupDate);
-                  console.log("dropoff date", dropoffDate);
-
-                  console.log("pickup time", pickupTime);
-                  console.log("dropoff date", dropoffTime);
+                  handleSubmit();
                 }}
               >
                 Submit
