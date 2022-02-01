@@ -6,7 +6,6 @@ import RentalDatePicker from "./RentalDatePicker";
 import LocationPicker from "./LocationPicker";
 import "@blueprintjs/datetime/lib/css/blueprint-datetime.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
-import { getDateOnlyWithTime } from "@blueprintjs/datetime/lib/esm/common/dateUtils";
 import { Link } from "react-router-dom";
 
 const locations = [
@@ -50,64 +49,6 @@ const SubmitForm = () => {
 
     console.log(input);
   };
-
-  // "UI-Input": {
-  //   "type": "object",
-  //   "properties": {
-  //     "SessionCheckID": {
-  //       "type": "string"
-  //     },
-  //     "Brand": {
-  //       "type": "string"
-  //     },
-  //     "PuIsoLocationCode": {
-  //       "type": "object",
-  //       "properties": {
-  //         "PuCountry": {
-  //           "type": "string"
-  //         },
-  //         "PuStateProvince": {
-  //           "type": "string"
-  //         },
-  //         "PuGdsCity": {
-  //           "type": "string"
-  //         },
-  //         "PuLocation": {
-  //           "type": "integer"
-  //         }
-  //       }
-  //     },
-  //     "PuDate": {
-  //       "type": "string"
-  //     },
-  //     "PuTime": {
-  //       "type": "string"
-  //     },
-  //     "DoIsoLocationCode": {
-  //       "type": "object",
-  //       "properties": {
-  //         "DoCountry": {
-  //           "type": "string"
-  //         },
-  //         "DoStateProvince": {
-  //           "type": "string"
-  //         },
-  //         "DoGdsCity": {
-  //           "type": "string"
-  //         },
-  //         "DoLocation": {
-  //           "type": "integer"
-  //         }
-  //       }
-  //     },
-  //     "DoDate": {
-  //       "type": "string"
-  //     },
-  //     "DoTime": {
-  //       "type": "string"
-  //     }
-  //   }
-  // }
 
   useEffect(() => {
     if (
