@@ -2,15 +2,13 @@ import React from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import { Card } from '@blueprintjs/core';
 
-const LogConversions=() => {
+const LogConversions=({inboundBooking}) => {
     return( 
         <div className='logs-dashboard'>
         <div className='input-container'>
             <h1>Seamless Input:</h1>
             <Card className='input-log-card'>
-                <div>
-                    
-                </div>
+                <div><pre>{JSON.stringify(inboundBooking, null, 2) }</pre></div>
             </Card>
         </div>
         <div className='output-container'>

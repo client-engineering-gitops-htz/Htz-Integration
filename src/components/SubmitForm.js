@@ -14,7 +14,7 @@ const locations = [
   { name: "DFW", id: 3 },
 ];
 
-const SubmitForm = () => {
+const SubmitForm = ({setInboundBooking}) => {
   const [pickupLocation, setPickupLocation] = useState();
   const [pickupDate, setPickupDate] = useState();
   const [pickupTime, setPickupTime] = useState();
@@ -46,6 +46,8 @@ const SubmitForm = () => {
       DoDate: dropoffDateFormatted,
       DoTime: dropoffTime.toLocaleTimeString("en-GB"),
     };
+    
+    setInboundBooking(input)
 
     console.log(input);
   };
@@ -116,10 +118,9 @@ const SubmitForm = () => {
               />
             </div>
 
-            {/* !formFilled ? "disabled-link" : "" */}
-            <Link to="/landing">
+            <Link className={!formFilled ? "disabled-link" : ""} to="/landing">
               <Button
-                // disabled={!formFilled}
+                disabled={!formFilled}
                 className="submit-button"
                 onClick={() => {
                   handleSubmit();
