@@ -42,6 +42,7 @@ class SelectLocation extends React.PureComponent {
     if (this.props.setLocation) {
       this.props.setLocation(location.OAG_CODE);
     }
+    console.log(` State is now ${this.props.location}`)
   };
 }
 
