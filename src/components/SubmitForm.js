@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/DigitalMesh.css";
-import { Card, Button, HTMLSelect } from "@blueprintjs/core";
+import { Card, Button } from "@blueprintjs/core";
 import { TimePicker } from "@blueprintjs/datetime";
 import RentalDatePicker from "./RentalDatePicker";
 import LocationPicker from "./LocationPicker";

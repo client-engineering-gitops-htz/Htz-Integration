@@ -1,6 +1,5 @@
 import React from "react";
-import SubmitForm from "./SubmitForm";
-import { Routes, Route, Link } from "react-router-dom";
+
 import { Card } from "@blueprintjs/core";
 
 const LandingPage = () => {
