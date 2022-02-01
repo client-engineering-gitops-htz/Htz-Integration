@@ -1,55 +1,46 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Button, MenuItem, H5 } from "@blueprintjs/core";
 import { Select } from "@blueprintjs/select";
-import * as Locations from "./locations";
+import * as Locations from "./utils/locations";
 
 const LocationSelect = Select.ofType();
 
-class SelectLocation extends React.PureComponent {
-  constructor(props) {
-    super(props);
+const SelectLocation = ({
+  label,
+  type,
+  setDropoffLocation,
+  setPickupLocation,
+  intent,
+}) => {
+  const [location, setLocation] = useState(Locations.importedUSLocations[0]);
 
-    this.state = {
-      location: Locations.importedUSLocations[0]
-    };
-  }
-  render() {
-    const buttonText = this.state.location.LOC_NM || `Selection Location`;
-    return (
-      <div>
-        {this.props.label && <H5>{this.props.label}</H5>}
-        <LocationSelect
-          fill
-          items={Locations.importedUSLocations}
-          itemPredicate={Locations.filterLocation}
-          itemRenderer={Locations.renderLocation}
-          noResults={<MenuItem disabled={true} text="No results." />}
-          onItemSelect={this.handleValueChange}
-        >
-          <Button
-            intent={this.props.intent}
-            text={buttonText}
-            rightIcon="caret-down"
-          />
-        </LocationSelect>
-      </div>
-    );
-  }
+  const handleValueChange = (location) => {
+    setLocation(location);
 
-  handleValueChange = location => {
-    console.log(location);
-    this.setState({ location: location });
-   
-    // if the type is drop off, set drop off location
-    if (this.props.type === "Drop-Off"){
-       this.props.setDropoffLocation(location)
+    if (type === "Drop-Off") {
+      setDropoffLocation(location);
     }
-    // if the type is pick up , set pick up location
-    if (this.props.type === "Pick-Up"){
-       this.props.setPickupLocation(location)
+    if (type === "Pick-Up") {
+      setPickupLocation(location);
     }
-    console.log(` State is now ${this.props.location}`)
   };
-}
+
+  const buttonText = location.LOC_NM || `Selection Location`;
+  return (
+    <div>
+      {label && <H5>{label}</H5>}
+      <LocationSelect
+        fill
+        items={Locations.importedUSLocations}
+        itemPredicate={Locations.filterLocation}
+        itemRenderer={Locations.renderLocation}
+        noResults={<MenuItem disabled={true} text="No results." />}
+        onItemSelect={handleValueChange}
+      >
+        <Button intent={intent} text={buttonText} rightIcon="caret-down" />
+      </LocationSelect>
+    </div>
+  );
+};
 
 export default SelectLocation;
