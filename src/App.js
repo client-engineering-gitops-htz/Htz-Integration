@@ -1,16 +1,13 @@
-import React from 'react';
-import './styles/DigitalMesh.css';
-import Dashboard from './components/Dashboard';
-import Topbar from './components/Topbar';
-
+import React from "react";
+import "./styles/DigitalMesh.css";
+import Dashboard from "./components/Dashboard";
+import Topbar from "./components/Topbar";
 
 function App() {
   return (
     <div className="DigitalMesh">
-      <Topbar/>
+      <Topbar />
       <Dashboard />
-      
-      
     </div>
   );
 }

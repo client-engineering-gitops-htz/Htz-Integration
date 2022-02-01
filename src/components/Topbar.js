@@ -7,37 +7,49 @@ import { Link } from "react-router-dom";
 const Topbar = () => {
   return (
     <div className="top-bar">
-      <div>
-        <img className="logo" src={HertzLogo} alt="hertz logo" />
-      </div>
+      <Link to="/">
+        <div>
+          <img className="logo" src={HertzLogo} alt="hertz logo" />
+        </div>
+      </Link>
       <div className="menu-items">
         <Icon
-          style={{ paddingRight: "15px", outline: "none", paddingTop: "6px", color:"#5c7080" }}
+          style={{
+            paddingRight: "15px",
+            outline: "none",
+            paddingTop: "6px",
+            color: "#5c7080",
+          }}
           icon="help"
           size={18}
         />
         <Popover2
           content={
             <Menu>
-            <Link to="/"> 
-              <MenuItem icon="dollar" text="Book a Trip" />
-            </Link>
+              <Link to="/">
+                <MenuItem icon="dollar" text="Book a Trip" />
+              </Link>
               <MenuDivider />
-            <Link to="/landing">
-              <MenuItem icon="dashboard" text="Results Dashboard" />
-            </Link>
+              <Link to="/landing">
+                <MenuItem icon="dashboard" text="Results Dashboard" />
+              </Link>
               <MenuDivider />
-            <Link to="/logs">
-              <MenuItem icon="comparison" text="Seamless Conversion Logs" />
-            </Link>
+              <Link to="/logs">
+                <MenuItem icon="comparison" text="Seamless Conversion Logs" />
+              </Link>
               <MenuDivider />
-            <Link to="/analytics">
-              <MenuItem icon="chart" text="Data Analytics Dashboard" />
-            </Link>
+              <Link to="/analytics">
+                <MenuItem icon="chart" text="Data Analytics Dashboard" />
+              </Link>
             </Menu>
           }
         >
-          <Button className="menu-button" icon="grid-view" size={18} minimal={true}/>
+          <Button
+            className="menu-button"
+            icon="grid-view"
+            size={18}
+            minimal={true}
+          />
         </Popover2>
       </div>
     </div>

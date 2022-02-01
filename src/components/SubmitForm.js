@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/DigitalMesh.css";
 import { Card, Button, HTMLSelect } from "@blueprintjs/core";
 import { TimePicker } from "@blueprintjs/datetime";
@@ -14,9 +14,9 @@ const locations = [
   { name: "DFW", id: 3 },
 ];
 
-const SubmitForm = ({setInboundBooking}) => {
+const SubmitForm = ({ setInboundBooking }) => {
   const [pickupLocation, setPickupLocation] = useState();
-  const [pickupDate, setPickupDate] = useState();
+  const [pickupDate, setPickupDate] = useState(); // format date
   const [pickupTime, setPickupTime] = useState();
   const [dropoffLocation, setDropoffLocation] = useState();
   const [dropoffDate, setDropoffDate] = useState();
@@ -46,8 +46,8 @@ const SubmitForm = ({setInboundBooking}) => {
       DoDate: dropoffDateFormatted,
       DoTime: dropoffTime.toLocaleTimeString("en-GB"),
     };
-    
-    setInboundBooking(input)
+
+    setInboundBooking(input);
 
     console.log(input);
   };
@@ -97,11 +97,8 @@ const SubmitForm = ({setInboundBooking}) => {
                 setDropoffDate={setDropoffDate}
                 pickupDate={pickupDate}
               />
-              <TimePicker
-                onChange={(val) => {
-                  setPickupTime(val);
-                }}
-              />
+              {/* Fix center alignment on digits */}
+              <TimePicker />
             </div>
 
             <div className="date-time-details">
@@ -111,11 +108,8 @@ const SubmitForm = ({setInboundBooking}) => {
                 setDropoffDate={setDropoffDate}
                 dropoffDate={dropoffDate}
               />
-              <TimePicker
-                onChange={(val) => {
-                  setDropoffTime(val);
-                }}
-              />
+              {/* Fix center alignment on caret */}
+              <TimePicker />
             </div>
 
             <Link className={!formFilled ? "disabled-link" : ""} to="/landing">
