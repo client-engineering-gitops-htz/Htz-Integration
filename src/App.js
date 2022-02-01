@@ -1,24 +1,23 @@
-import React from 'react';
-import './styles/DigitalMesh.css';
-import Dashboard from './components/Dashboard';
-import Topbar from './components/Topbar';
+import React from "react";
+import "./styles/DigitalMesh.css";
+import Dashboard from "./components/Dashboard";
+import Topbar from "./components/Topbar";
 import { Routes, Route, Link } from "react-router-dom";
-import LandingPage from './components/LandingPage';
-import LogConversions from './components/LogConversions';
-import AnalyticsDashboard from './components/AnalyticsDashboard';
+import LandingPage from "./components/LandingPage";
+import LogConversions from "./components/LogConversions";
+import AnalyticsDashboard from "./components/AnalyticsDashboard";
 
 function App() {
   return (
     <div className="DigitalMesh">
-      <Topbar/>
+      <Topbar />
       {/* <Dashboard /> */}
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/landing" element={<LandingPage />} />
         <Route path="/logs" element={<LogConversions />} />
-        <Route path="/analytics" element={<AnalyticsDashboard />}/>
+        <Route path="/analytics" element={<AnalyticsDashboard />} />
       </Routes>
-      
     </div>
   );
 }

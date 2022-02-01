@@ -7,12 +7,6 @@ import LocationPicker from "./LocationPicker";
 import "@blueprintjs/datetime/lib/css/blueprint-datetime.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
 
-const locations = [
-  { name: "JFK", id: 1 },
-  { name: "LGA", id: 2 },
-  { name: "DFW", id: 3 },
-];
-
 const SubmitForm = () => {
   const [pickupLocation, setPickupLocation] = useState();
   const [pickupDate, setPickupDate] = useState(); // format date
