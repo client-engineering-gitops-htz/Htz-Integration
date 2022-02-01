@@ -73,7 +73,7 @@
   min-width: 8rem;
 }
 
-.bp3-html-select .bp3-large{
+.bp3-html-select .bp3-large {
   background-color: #ffffff !important;
   background-image: none !important;
 }
@@ -103,8 +103,76 @@
   box-shadow: none !important;
 }
 
-.landing-page {
-  background-color: #f3f4f8;
-  height: 50rem;
+.disabled-link {
+  pointer-events: none;
+}
 
+.landing-page {
+  display: flex;
+  background-color: #f3f4f8;
+  min-height: 45rem;
+}
+
+.request-info{
+  margin-left: 28px;
+  width: 30rem;
+}
+
+.request-info-title {
+  padding-bottom: 10px;
+  border-bottom: solid 1px;
+  border-bottom-color: lightgray;
+  font-size: large;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.request-details {
+  padding-top:1rem;
+  padding-bottom:1rem;
+  color: grey
+}
+
+.request-info-card{
+  padding-bottom: 2rem;
+  padding-top: 1.75rem;
+  border-radius: 0;
+}
+
+.car-results{
+  
+  padding-top: 4.55rem;
+  padding-left: 5rem;
+}
+.results-card {
+  display: flex;
+  border-radius: 0;
+  width: 60rem;
+}
+
+.logs-dashboard{
+  background-color: #f3f4f8;
+  display: flex;
+  height: 47rem;
+}
+
+.input-container{
+  width: 47rem;
+  padding-left: 1.5rem;
+  
+}
+.input-log-card{
+  height:37rem;
+}
+
+.output-container{
+  width: 50rem;
+  padding-left: 2.5rem;
+}
+.output-log-card{
+  min-height:37rem;
+}
+
+.analytics-dashboard{
+  background-color: #f3f4f8;
 }
