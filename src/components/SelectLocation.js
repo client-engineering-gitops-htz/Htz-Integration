@@ -39,8 +39,14 @@ class SelectLocation extends React.PureComponent {
   handleValueChange = location => {
     console.log(location);
     this.setState({ location: location });
-    if (this.props.setLocation) {
-      this.props.setLocation(location.OAG_CODE);
+   
+    // if the type is drop off, set drop off location
+    if (this.props.type === "Drop-Off"){
+       this.props.setDropoffLocation(location)
+    }
+    // if the type is pick up , set pick up location
+    if (this.props.type === "Pick-Up"){
+       this.props.setPickupLocation(location)
     }
     console.log(` State is now ${this.props.location}`)
   };

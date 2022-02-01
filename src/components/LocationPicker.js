@@ -9,14 +9,13 @@ const locations = [
   { name: "DFW", id: 3 },
 ];
 */
+
 function LocationPicker({ type, setPickupLocation, setDropoffLocation }) {
   return (
     <SelectLocation
-      handleValueChange ={(e) => {
-        console.log(e); 
-        if (type === "Pick-Up") this.SelectionLocation(e.target.value);
-        if (type === "Drop-Off") this.SelectLocation.setDropoffLocation(e.target.value);
-      }}
+      type = {type} 
+      setPickupLocation = {setPickupLocation}
+      setDropoffLocation = {setDropoffLocation}
     >
     <option selected>{`Choose ${type} location`}</option>
     
