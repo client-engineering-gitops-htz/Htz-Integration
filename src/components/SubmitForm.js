@@ -15,10 +15,6 @@ const locations = [
   { name: "DFW", id: 3 },
 ];
 
-// Location schema {
-//
-// }
-
 // SubmitForm schema
 // {
 //   pickupLocation: Object,
