@@ -24,7 +24,9 @@
   justify-content: end;
   margin: 1rem;
 }
-
+.bp3-portal {
+  margin-top: 12rem;
+}
 .bp3-html-select {
   align-content: flex-end;
 }
