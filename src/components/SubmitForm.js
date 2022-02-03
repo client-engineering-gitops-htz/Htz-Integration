@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/DigitalMesh.css";
 import { Card, Button } from "@blueprintjs/core";
 import { TimePicker } from "@blueprintjs/datetime";
@@ -98,7 +98,9 @@ const SubmitForm = ({ setInboundBooking }) => {
                 pickupDate={pickupDate}
               />
               {/* Fix center alignment on digits */}
-              <TimePicker />
+              <TimePicker onChange={(val) => {
+                  setPickupTime(val);
+                }}/>
             </div>
 
             <div className="date-time-details">
@@ -109,7 +111,9 @@ const SubmitForm = ({ setInboundBooking }) => {
                 dropoffDate={dropoffDate}
               />
               {/* Fix center alignment on caret */}
-              <TimePicker />
+              <TimePicker onChange={(val) => {
+                  setDropoffTime(val);
+                }}/>
             </div>
 
             <Link className={!formFilled ? "disabled-link" : ""} to="/landing">
