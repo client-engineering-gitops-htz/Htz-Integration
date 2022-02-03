@@ -6,14 +6,71 @@ import RentalDatePicker from "./RentalDatePicker";
 import LocationPicker from "./LocationPicker";
 import "@blueprintjs/datetime/lib/css/blueprint-datetime.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
+import { Link } from "react-router-dom";
 
-const SubmitForm = () => {
+const locations = [
+  { name: "JFK", id: 1 },
+  { name: "LGA", id: 2 },
+  { name: "DFW", id: 3 },
+];
+
+const SubmitForm = ({ setInboundBooking }) => {
   const [pickupLocation, setPickupLocation] = useState();
   const [pickupDate, setPickupDate] = useState(); // format date
   const [pickupTime, setPickupTime] = useState();
   const [dropoffLocation, setDropoffLocation] = useState();
   const [dropoffDate, setDropoffDate] = useState();
   const [dropoffTime, setDropoffTime] = useState();
+  const [formFilled, setFormFilled] = useState(false);
+
+  const handleSubmit = () => {
+    const pickupDateFormatted = pickupDate
+      .toLocaleDateString("sv-SE")
+      .split("-")
+      .join("");
+
+    const dropoffDateFormatted = dropoffDate
+      .toLocaleDateString("sv-SE")
+      .split("-")
+      .join("");
+
+    const input = {
+      PuIsoLocationCode: {
+        PuLocation: parseInt(pickupLocation),
+      },
+      PuDate: pickupDateFormatted,
+      PuTime: pickupTime.toLocaleTimeString("en-GB"),
+      DoIsoLocationCode: {
+        DoLocation: parseInt(dropoffLocation),
+      },
+      DoDate: dropoffDateFormatted,
+      DoTime: dropoffTime.toLocaleTimeString("en-GB"),
+    };
+
+    setInboundBooking(input);
+
+    console.log(input);
+  };
+
+  useEffect(() => {
+    if (
+      pickupLocation &&
+      pickupDate &&
+      pickupTime &&
+      dropoffLocation &&
+      dropoffDate &&
+      dropoffTime
+    ) {
+      setFormFilled(true);
+    }
+  }, [
+    pickupLocation,
+    pickupDate,
+    pickupTime,
+    dropoffLocation,
+    dropoffDate,
+    dropoffTime,
+  ]);
 
   return (
     <div>
@@ -55,18 +112,17 @@ const SubmitForm = () => {
               <TimePicker />
             </div>
 
-            <Button
-              className="submit-button"
-              onClick={() => {
-                console.log("pickup", pickupLocation);
-                console.log("dropoff", dropoffLocation);
-
-                console.log("pickup date", pickupDate);
-                console.log("dropoff date", dropoffDate);
-              }}
-            >
-              Submit
-            </Button>
+            <Link className={!formFilled ? "disabled-link" : ""} to="/landing">
+              <Button
+                disabled={!formFilled}
+                className="submit-button"
+                onClick={() => {
+                  handleSubmit();
+                }}
+              >
+                Submit
+              </Button>
+            </Link>
           </div>
         </Card>
       </div>
