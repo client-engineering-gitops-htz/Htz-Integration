@@ -23,9 +23,11 @@
   display: flex-end;
   margin: 1rem;
 }
-.bp3-portal {
-  margin-top: 12rem;
+
+.bp3-popover.bp3-select-popover{
+  margin-top: 17rem;
 }
+
 .bp3-html-select {
   align-content: flex-end;
 }
@@ -89,9 +91,6 @@
   min-width: 6rem;
 }
 
-.bp3-popover-wrapper{
-  max-height: 10rem;
-}
 
 .bp3-button.bp3-intent-primary.bp3-popover2-target {
   background-color: white;
