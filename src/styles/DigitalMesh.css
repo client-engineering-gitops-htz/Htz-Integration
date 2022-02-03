@@ -25,7 +25,8 @@
 }
 
 .bp3-popover.bp3-select-popover{
-  margin-top: 17rem;
+  max-height: 25rem;
+  overflow-y: scroll;
 }
 
 .bp3-html-select {
@@ -53,7 +54,7 @@
   justify-content: center;
   width: 90%;
   padding-top: 4%;
-  padding-bottom: 28rem;
+  padding-bottom: 35rem;
 }
 .trip-header {
   padding-left: 1rem;
