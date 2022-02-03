@@ -11,7 +11,7 @@ function RentalDatePicker({
   dropoffDate,
 }) {
   return (
-    <div>
+    <div className="date-container">
       {type === "Pick-Up" && (
         <DateInput
           formatDate={(date) => date.toLocaleDateString()}

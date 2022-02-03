@@ -1,5 +1,4 @@
 import React from "react";
-
 import SelectLocation from "./SelectLocation";
 
 function LocationPicker({ type, setPickupLocation, setDropoffLocation }) {

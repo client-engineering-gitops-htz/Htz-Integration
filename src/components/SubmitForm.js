@@ -8,11 +8,6 @@ import "@blueprintjs/datetime/lib/css/blueprint-datetime.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
 import { Link } from "react-router-dom";
 
-const locations = [
-  { name: "JFK", id: 1 },
-  { name: "LGA", id: 2 },
-  { name: "DFW", id: 3 },
-];
 
 const SubmitForm = ({ setInboundBooking }) => {
   const [pickupLocation, setPickupLocation] = useState();
@@ -36,12 +31,12 @@ const SubmitForm = ({ setInboundBooking }) => {
 
     const input = {
       PuIsoLocationCode: {
-        PuLocation: parseInt(pickupLocation),
+        PuLocation: pickupLocation.OAG_CODE,
       },
       PuDate: pickupDateFormatted,
       PuTime: pickupTime.toLocaleTimeString("en-GB"),
       DoIsoLocationCode: {
-        DoLocation: parseInt(dropoffLocation),
+        DoLocation: dropoffLocation.OAG_CODE,
       },
       DoDate: dropoffDateFormatted,
       DoTime: dropoffTime.toLocaleTimeString("en-GB"),
@@ -91,25 +86,29 @@ const SubmitForm = ({ setInboundBooking }) => {
             />
 
             <div className="date-time-details">
+              <div className="date-picker-sizing">
               <RentalDatePicker
                 type={"Pick-Up"}
                 setPickupDate={setPickupDate}
                 setDropoffDate={setDropoffDate}
                 pickupDate={pickupDate}
-              />
+                />
+                </div>
               {/* Fix center alignment on digits */}
               <TimePicker onChange={(val) => {
                   setPickupTime(val);
-                }}/>
+              }}/>
             </div>
 
             <div className="date-time-details">
+            <div className="date-picker-sizing">
               <RentalDatePicker
                 type={"Drop-Off"}
                 setPickupDate={setPickupDate}
                 setDropoffDate={setDropoffDate}
                 dropoffDate={dropoffDate}
-              />
+                />
+              </div>
               {/* Fix center alignment on caret */}
               <TimePicker onChange={(val) => {
                   setDropoffTime(val);

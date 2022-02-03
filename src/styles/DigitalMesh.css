@@ -20,8 +20,7 @@
   padding-left: 20px;
 }
 .menu-items {
-  display: flex;
-  justify-content: end;
+  display: flex-end;
   margin: 1rem;
 }
 .bp3-portal {
@@ -84,6 +83,14 @@
   display: flex;
   align-items: center;
   margin-left: 1rem;
+}
+
+.date-picker-sizing{
+  min-width: 6rem;
+}
+
+.bp3-popover-wrapper{
+  max-height: 10rem;
 }
 
 .bp3-button.bp3-intent-primary.bp3-popover2-target {
