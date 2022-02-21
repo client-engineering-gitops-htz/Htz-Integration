@@ -10,6 +10,7 @@
 }
 .top-bar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: solid 5px;
   border-bottom-color: #fed60a;
@@ -166,6 +167,7 @@
 }
 
 .input-container{
+  display: flex;
   width: 47rem;
   padding-left: 1.5rem;
   
@@ -175,6 +177,7 @@
 }
 
 .output-container{
+  display: flex;
   width: 50rem;
   padding-left: 2.5rem;
 }
