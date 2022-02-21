@@ -10,6 +10,7 @@
 }
 .top-bar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: solid 5px;
   border-bottom-color: #fed60a;
@@ -25,7 +26,8 @@
 }
 
 .bp3-popover.bp3-select-popover{
-  margin-top: 17rem;
+  max-height: 25rem;
+  overflow-y: scroll;
 }
 
 .bp3-html-select {
@@ -53,7 +55,7 @@
   justify-content: center;
   width: 90%;
   padding-top: 4%;
-  padding-bottom: 28rem;
+  padding-bottom: 35rem;
 }
 .trip-header {
   padding-left: 1rem;
@@ -165,6 +167,7 @@
 }
 
 .input-container{
+  display: flex;
   width: 47rem;
   padding-left: 1.5rem;
   
@@ -174,6 +177,7 @@
 }
 
 .output-container{
+  display: flex;
   width: 50rem;
   padding-left: 2.5rem;
 }

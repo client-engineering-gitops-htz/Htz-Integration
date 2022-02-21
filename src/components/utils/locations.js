@@ -11,12 +11,12 @@ export const renderLocation = (data, { handleClick, modifiers, query }) => {
   if (!modifiers.matchesPredicate) {
     return null;
   }
-  const text = `${data.OAG_CODE}`;
+  const text = `${data.CTY_NM.trim()}`;
   return (
     <MenuItem
       active={modifiers.active}
       disabled={modifiers.disabled}
-      label={data.LOC_NM}
+     // label={data.LOC_NM}
       key={data.rank}
       onClick={handleClick}
       text={highlightText(text, query)}
@@ -28,7 +28,7 @@ export const filterLocation = (query, location) => {
   return (
     `${
       location.rank
-    }. ${location.OAG_CODE.toLowerCase()} ${location.LOC_NM.toLowerCase()}`.indexOf(
+    }. ${location.CTY_NM.toLowerCase()}`.indexOf(
       query.toLowerCase()
     ) >= 0
   );

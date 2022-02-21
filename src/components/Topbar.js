@@ -17,7 +17,7 @@ const Topbar = () => {
           style={{
             paddingRight: "15px",
             outline: "none",
-            paddingTop: "6px",
+            // paddingTop: "6px",
             color: "#5c7080",
           }}
           icon="help"
