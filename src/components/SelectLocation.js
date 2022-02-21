@@ -25,7 +25,7 @@ const SelectLocation = ({
     }
   };
 
-  const buttonText = location.LOC_NM || `Selection Location`;
+  const buttonText = location.CTY_NM || `Selection Location`;
   return (
     <div>
       {label && <H5>{label}</H5>}
