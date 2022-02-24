@@ -14,7 +14,7 @@ const LogConversions = ({ inboundBooking }) => {
         </Card>
         </div>
         <div>
-        <h1>Input COBOL Transform:</h1>
+        <h1>Input COBOL:</h1>
         <Card className="input-log-card">
           <div>
             <pre>{JSON.stringify(inboundBooking, null, 2)}</pre>
@@ -25,7 +25,7 @@ const LogConversions = ({ inboundBooking }) => {
       <div className="output-container">
       <div>
 
-      <h1>Outbound COBOL Transform:</h1>
+      <h1>Outbound COBOL:</h1>
         <Card className="input-log-card">
           <div>
             <pre>{JSON.stringify(inboundBooking, null, 2)}</pre>
