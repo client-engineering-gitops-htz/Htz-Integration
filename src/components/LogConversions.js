@@ -28,7 +28,7 @@ const LogConversions = ({ inboundBooking }) => {
       <h1>Outbound COBOL:</h1>
         <Card className="input-log-card">
           <div>
-            <pre>{JSON.stringify(inboundBooking, null, 2)}</pre>
+            <pre></pre>
           </div>
         </Card>
       </div>
