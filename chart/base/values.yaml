@@ -39,7 +39,7 @@ env:
 
 # Secret:
 #   kind: Secret
-#   name: lauren-demo-secret
+#   name: htz-int-secret
 #   namespace: dev
 #   type: Opaque
 #   REACT_APP_API_KEY: MzZlYTUxNDItYTI4Ny00NmYyLWJkYjMtZDc5ZDE1OWY1MmIzCg==
