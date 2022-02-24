@@ -73,20 +73,27 @@ const SubmitForm = ({ setInboundBooking }) => {
         <div className="trip-header">Book Your Trip</div>
         <Card className="car-card">
           <div className="trip-details">
+            <div className="trip-detail-container-labels">
+            <h4>Pick-Up Location</h4>
             <LocationPicker
               type={"Pick-Up"}
               setPickupLocation={setPickupLocation}
               setDropoffLocation={setDropoffLocation}
-            />
-
+              />
+            </div>
+            <div className="trip-detail-container-labels">
+            <h4>Drop-off Location</h4>
             <LocationPicker
               type={"Drop-Off"}
               setPickupLocation={setPickupLocation}
               setDropoffLocation={setDropoffLocation}
-            />
+              />
+            </div>
 
             <div className="date-time-details">
               <div className="date-picker-sizing">
+              <div className="trip-detail-container-labels">
+              <h4>Pick-Up Date</h4>
               <RentalDatePicker
                 type={"Pick-Up"}
                 setPickupDate={setPickupDate}
@@ -94,14 +101,20 @@ const SubmitForm = ({ setInboundBooking }) => {
                 pickupDate={pickupDate}
                 />
                 </div>
+                </div>
               {/* Fix center alignment on digits */}
+              <div className="trip-detail-container-labels">
+            <h4>Pick-Up Time</h4>
               <TimePicker onChange={(val) => {
-                  setPickupTime(val);
+                setPickupTime(val);
               }}/>
+              </div>
             </div>
 
             <div className="date-time-details">
             <div className="date-picker-sizing">
+            <div className="trip-detail-container-labels">
+            <h4>Drop-off Date</h4>
               <RentalDatePicker
                 type={"Drop-Off"}
                 setPickupDate={setPickupDate}
@@ -109,13 +122,17 @@ const SubmitForm = ({ setInboundBooking }) => {
                 dropoffDate={dropoffDate}
                 />
               </div>
+                </div>
               {/* Fix center alignment on caret */}
+              <div className="trip-detail-container-labels">
+            <h4>Drop-off Time</h4>
               <TimePicker onChange={(val) => {
-                  setDropoffTime(val);
-                }}/>
+                setDropoffTime(val);
+              }}/>
+              </div>
             </div>
 
-            <Link className={!formFilled ? "disabled-link" : ""} to="/landing">
+            <Link className={!formFilled ? "disabled-link" : ""} to="/logs">
               <Button
                 disabled={!formFilled}
                 className="submit-button"

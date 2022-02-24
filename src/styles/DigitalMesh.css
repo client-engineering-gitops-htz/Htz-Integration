@@ -5,6 +5,11 @@
 .DigitalMesh {
   background-color: #f3f4f8;
 }
+
+.h4{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
 .dashboard {
   background-color: #f3f4f8;
 }
@@ -46,7 +51,7 @@
   border-bottom: solid 5px;
   border-bottom-color: #fed60a;
   min-height: 10rem;
-  max-width: 100rem;
+  max-width: 200rem;
 }
 
 .card-container {
@@ -65,9 +70,13 @@
 
 .trip-details {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
 }
 
+.trip-detail-container-labels {
+  min-width: 8rem;
+}
 .select-location {
   background-color: #ffffff !important;
   background-image: none !important;
@@ -168,21 +177,28 @@
 
 .input-container{
   display: flex;
-  width: 47rem;
+  justify-content: space-evenly;
+  width: 50rem;
   padding-left: 1.5rem;
-  
 }
 .input-log-card{
+  overflow-y: scroll;
+  overflow-x: scroll;
   height:37rem;
+  width: 20rem;
 }
 
 .output-container{
   display: flex;
+  justify-content: space-evenly;
   width: 50rem;
-  padding-left: 2.5rem;
+  padding-right: 1.5rem;
 }
 .output-log-card{
   min-height:37rem;
+  width: 20rem;
+  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 .analytics-dashboard{

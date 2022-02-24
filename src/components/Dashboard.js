@@ -3,7 +3,6 @@ import SubmitForm from "./SubmitForm";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./LandingPage";
 import LogConversions from "./LogConversions";
-import AnalyticsDashboard from "./AnalyticsDashboard";
 
 const Dashboard = () => {
   const [inboundBooking, setInboundBooking] = useState();
@@ -21,7 +20,6 @@ const Dashboard = () => {
           path="/logs"
           element={<LogConversions inboundBooking={inboundBooking} />}
         />
-        <Route path="/analytics" element={<AnalyticsDashboard />} />
       </Routes>
     </div>
   );
