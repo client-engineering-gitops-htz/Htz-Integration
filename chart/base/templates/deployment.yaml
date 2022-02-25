@@ -64,97 +64,97 @@ spec:
             # - name: CLIENT_CERT
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: CLIENT_CERT
             # - name: CLIENT_KEY
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: CLIENT_KEY
             # - name: CLIENT_CA
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: CLIENT_CA
             # - name: DB_HOST
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: DB_HOST
             # - name: DB_NAME
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: DB_NAME
             # - name: DB_PASS
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: DB_PASS
             # - name: DB_PORT
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: DB_PORT
             # - name: DB_USER
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: DB_USER
-            # - name: REACT_APP_API_KEY
-            #   valueFrom:
-            #     secretKeyRef:
-            #       key: REACT_APP_API_KEY
-            #       name: htz-int-api-key
+            - name: REACT_APP_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: REACT_APP_API_KEY
+                  name: lauren-demo-api-key
             # - name: APP_ID_CLIENT_ID
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: APP_ID_CLIENT_ID
             # - name: APP_ID_TENANT_ID
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: APP_ID_TENANT_ID
             # - name: APP_ID_SECRET
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: APP_ID_SECRET
             # - name: APP_ID_NAME
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: APP_ID_NAME
             # - name: APP_ID_OAUTH_SERVER_URL
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: APP_ID_OAUTH_SERVER_URL
             # - name: APP_ID_PROFILES_URL
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: APP_ID_PROFILES_URL
             # - name: APP_ID_DISCOVERY_ENDPOINT
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: APP_ID_DISCOVERY_ENDPOINT
             # - name: APP_ID_REDIRECT_URI
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: APP_ID_REDIRECT_URI
             # - name: APP_ID_TYPE
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: APP_ID_TYPE
             # - name: SESSION_SECRET
             #   valueFrom:
             #     secretKeyRef:
-            #       name: htz-int
+            #       name: lauren-demo
             #       key: SESSION_SECRET
           resources:
             {{- toYaml .Values.resources | nindent 12 }}

@@ -5,8 +5,8 @@ global: {}
 replicaCount: 2
 logLevel: 'debug'
 image:
-  repository: replace
-  tag: replace
+  repository: ubi8/nodejs-12
+  tag: 1-107
   pullPolicy: IfNotPresent
   port: 8080
 nameOverride: ''
